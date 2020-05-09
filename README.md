@@ -21,5 +21,7 @@ Input 2 uses the Aylien API to detect the sentiment of a phrase.
 
 Both inputs have to be of a certain length, >3 and >8 respectively.
 
+![A preview of the functionality](preview.png "A preview of the functionality")
+
 ### Aylien API
 You can sign up for the API [here](https://developer.aylien.com/signup)
