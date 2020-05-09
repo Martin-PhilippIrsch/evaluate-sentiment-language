@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Evaluate News with NLP Project</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>The awesome sentiment checker</h1>
+    </header>
+
+    <main>
+        <section>
+            <h1>Awesome Language detection</h1>
+            <form class="" onsubmit="return Client.handleSubmitLang(event)">
+                <input id="language" type="text" name="input" value="" placeholder="Write something in a language different to English: Guten Morgen">
+                <input type="submit" name="" value="submit" onclick="return Client.handleSubmitLang(event)" onsubmit="return Client.handleSubmitLang(event)">
+            </form>
+        </section>
+        <section class="output">
+            <strong>You wrote in the following language:</strong>
+            <div id="language-out"></div>
+            <div id="confidence-lang"></div>
+        </section>
+        <section>
+            <h1>Phrase sentiment checker</h1>
+            <form class="" onsubmit="return Client.handleSubmitAylien(event)">
+                <input id="phrase" type="text" name="input" value="" placeholder="Write phrase: Football is an amazing sport">
+                <input type="submit" name="" value="submit" onclick="return Client.handleSubmitAylien(event)" onsubmit="return Client.handleSubmitAylien(event)">
+            </form>
+        </section>
+
+        <section class="output">
+            <strong>Phrase polarity Results:</strong>
+            <div id="phrase-polarity"></div>
+            <div id="confidence-pol"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>If you would like to find our more about the AYlien API, make sure to check out their docs:
+            <a href="https://docs.aylien.com/textapi/#getting-started">Click me</a>.
+        </p>
+    </footer>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+
+</body>
+
+</html>
